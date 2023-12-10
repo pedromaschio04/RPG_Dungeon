@@ -1,0 +1,74 @@
+Jogo de RPG estilo dungeon
+
+-Sobre:
+    jogo de rpg estilo dungeon onde o protagonista deve percorrer um labirinto enfrentado monstros e adquirindo itens
+
+-Requisitos:
+    Implementar um RPG em C++ de acordo com as seguintes instruções:
+
+    O jogo será um RPG onde um herói, controlado pelo usuário, explorará um ou
+    mais labirintos encontrando tesouros e inimigos. Idealmente, o jogo deve
+    reutilizar código de T1.
+
+    As classes criadas para T1 poderão ser utilizadas para serem as classes
+    selecionadas pelo usuário ou dos inimigos no labirinto.
+
+    Terá as mesmas mecânicas de ataque especial e sangramento, como
+    implementadas em T1.
+
+    O usuário irá controlar o personagem com o teclado e/ou mouse enquanto
+    explora o labirinto e luta contra os inimigos.
+
+    O combate pode possuir a mesma implementação de T1 ou pode permitir que o
+    usuário tome decisões durante o combate.
+
+    Na tela inicial o usuário deve escolher o nome e a classe do personagem.
+
+    O personagem deve possuir um inventório, onde guardará itens e tesouros
+    encontrados no labirinto.
+
+    Os itens devem prover bônus para o personagem durante os combates.
+
+    O labirinto deve ter um fim onde o personagem lutará com um boss para
+    finalizar o jogo.
+
+    Ao fim, o jogo deve apresentar uma pontuação de acordo com os tesouros
+    acumulados durante a exploração do labirinto.
+
+-Classes:
+    -jogoRPG:
+        Atributos:
+            Inimigos Derrotados
+            Tesouros Encontrados 
+            Jogador Atual
+        Métodos:
+            Batalhar
+            Sangrar
+            Menu
+
+    -Personagem:
+        Atributos:
+            Vida
+            Ataque
+            Defesa 
+            Sangramento  
+        Métodos:
+
+    -jogador(herda atributos de personagem):
+        Atributos:
+            Invnentário(lista)
+            Frase ataque especial
+        Métodos:
+            Dizer Frase  
+
+    -npc(herda atributos de personagem):
+        Atributos:
+        Métodos:  
+
+    -mapa
+        Atributos:
+        Métodos:
+          
+    -batalha
+        Atributos:
+        Métodos:  
