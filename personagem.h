@@ -4,7 +4,7 @@ using namespace std;
 class personagem{
     private:
         string nome;
-        int vida;
+        int vida = 100;
         int ataque;
         int defesa;
         int sangramento;
@@ -26,8 +26,8 @@ class personagem{
         void setSangramento(int sg);
         int getSangramento();
 
-        void escolherClasse();
-        
         void setClasse(int cl);
         int getClasse();
+        
+        void escolherClasse();
 };

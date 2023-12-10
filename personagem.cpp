@@ -2,10 +2,8 @@
 #include <string>
 #include "personagem.h"
 using namespace std;
-
-    personagem::personagem(){
-        this->setVida(100);
-    }
+     
+    personagem::personagem(){};
 
     void personagem::setNome(string nm){
         nome = nm;
@@ -81,4 +79,6 @@ using namespace std;
             break;
         }
     }
+    
+  
 
