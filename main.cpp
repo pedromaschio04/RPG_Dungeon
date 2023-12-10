@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "personagem.h"
+#include "inimigo.h"
 using namespace std;
 
 int main(){
