@@ -51,13 +51,13 @@ Jogo de RPG estilo dungeon
             Vida
             Ataque
             Defesa 
-            Sangramento  
+            Sangramento
+            Invnentário(lista)
+            Frase ataque especial  
         Métodos:
 
-    -jogador(herda atributos de personagem):
+    -Tipo do Jogador(herda atributos de personagem):
         Atributos:
-            Invnentário(lista)
-            Frase ataque especial
         Métodos:
             Dizer Frase  
 
@@ -68,7 +68,7 @@ Jogo de RPG estilo dungeon
     -mapa
         Atributos:
         Métodos:
-          
+
     -batalha
         Atributos:
         Métodos:  
