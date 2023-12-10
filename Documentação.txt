@@ -56,13 +56,11 @@ Jogo de RPG estilo dungeon
             Frase ataque especial  
         Métodos:
 
-    -Tipo do Jogador(herda atributos de personagem):
+    -npc:
         Atributos:
-        Métodos:
-            Dizer Frase  
-
-    -npc(herda atributos de personagem):
-        Atributos:
+            Vida
+            Ataque 
+            Defesa 
         Métodos:  
 
     -mapa

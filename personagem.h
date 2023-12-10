@@ -1,20 +1,33 @@
 #include <string>
-class personagem{
+using namespace std;
 
+class personagem{
     private:
         string nome;
-        string tipo;
-        double vid = 25;
-        double atq = 0;
-        double def = 0;
-        double danoCausado = 0;
-        int sangramento = 0; 
-        string especial;
-    
-        int qtdEspeciais=0;
+        int vida;
+        int ataque;
+        int defesa;
+        int sangramento;
+        int classe;
     public:
+        personagem();
+        void setNome(string nm);
+        string getNome();
 
-		Personagem(string nm);
+        void setVida(int vd);
+        int getVida();
 
-        void printStatus();
+        void setAtaque(int at);
+        int getAtaque();
+
+        void setDefesa(int df);
+        int getDefesa();
+
+        void setSangramento(int sg);
+        int getSangramento();
+
+        void escolherClasse();
+        
+        void setClasse(int cl);
+        int getClasse();
 };
