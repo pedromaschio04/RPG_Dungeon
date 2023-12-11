@@ -23,18 +23,19 @@ using namespace std;
         int atacante = 0; //0 representa o jogador e 1 o npc
         char decisao;
         while(npc.getVida() > 0){
-
-            cout<<"---------------------\n|vida do inimigo: "<<npc.getVida()<<"|\n---------------------\n";
+            
+            npc.exibirStatus();
+            jogador->exibirStatus();
 
             if(atacante == 0){
                 cout<<"Deseja atacar?\n";
                 cin>>decisao;
-                cout<<"SINTA O GOSTO DA MORTE!!\n***voce chapocou o monstro***\n\n";
+                cout<<"SINTA O GOSTO DA MORTE!!\n";
                 npc.setVida((npc.getVida()-jogador->getAtaque()));
                 atacante = 1;
             }
             else{
-                cout<<"O ataque do monstro é de "<<npc.getAtaque()<<". Sua vida atual é de "<<jogador->getVida()<<".\n\nDeseja se defender ou contra atacar?\nD-Defender\nC-Contra Atacar\n";
+                cout<<"Monstro desfere um ataque em sua direção\nDeseja se defender ou contra atacar?\nD-Defender\nC-Contra Atacar\n";
                 cin>>decisao;
                 if(toupper(decisao)=='D'){
                     jogador->setVida(jogador->getVida()-(npc.getAtaque()-jogador->getDefesa()));
@@ -46,6 +47,27 @@ using namespace std;
 
                 atacante = 0;
             }
-            //system("clear");
+            system("clear");
         }
+    }
+
+    void jogoRPG::run(personagem *jogador){
+
+    }
+    
+    int jogoRPG::menu(){
+        int decisao;
+        cout<<"Bem vindo(a) ao Dungeon Storm!!\n1-Inciar partida\n2-Instruções\n3-Sair\n";
+        cin>>decisao;
+        system("clear");
+        if(decisao==2){
+            char key;
+            while(toupper(key)!='Q'){
+                cout<<"\n-----------------------------------\n| >Para jogar Dungeon Storm basta |\n|  utilizar as setinhas para se   |\n|  moviventar pelo labirinto.     |\n|                                 |\n| >Pressione ESC para voltar para |\n|  voltar para o menu principal.  | \n-----------------------------------\n";                                                         
+                cin>> key;
+                system("clear");
+            }
+            menu();                                       
+        }
+        return decisao;
     }

@@ -13,4 +13,6 @@ class inimigo{
 
         void setDefesa(int df);
         int getDefesa();
+
+        void exibirStatus();
 };

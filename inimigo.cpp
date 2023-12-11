@@ -28,3 +28,7 @@ using namespace std;
         defesa = 5;
         ataque = 3;
     }
+
+    void inimigo::exibirStatus(){
+        cout<<"-----------------------------------\n|Monstro|Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|\n-----------------------------------\n";  
+    }

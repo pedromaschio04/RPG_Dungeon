@@ -79,6 +79,10 @@ using namespace std;
             break;
         }
     }
+
+    void personagem::exibirStatus(){
+        cout<<"---------------------------------------\n|Jogador(a)|Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|\n---------------------------------------\n";  
+    }
     
   
 

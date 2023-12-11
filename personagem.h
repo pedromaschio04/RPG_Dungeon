@@ -30,4 +30,5 @@ class personagem{
         int getClasse();
         
         void escolherClasse();
+        void exibirStatus();
 };
