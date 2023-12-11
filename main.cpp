@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <ncurses.h>
 #include "inimigo.h"
 #include "jogoRPG.h"
 using namespace std;
