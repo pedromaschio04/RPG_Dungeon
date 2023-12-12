@@ -7,7 +7,7 @@ class personagem{
         int vida = 100;
         int ataque;
         int defesa;
-        int sangramento;
+        int sangramento=0;
         int classe;
     public:
         personagem();

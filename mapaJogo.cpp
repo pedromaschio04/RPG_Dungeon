@@ -31,6 +31,7 @@ using namespace std;
 
     void mapaJogo::andar(vector<int> ps){
         char key;
+        cout<<"\n";
         cin>>key;
         int posicao[2];
         if(toupper(key)=='W'){

@@ -30,5 +30,5 @@ using namespace std;
     }
 
     void inimigo::exibirStatus(){
-        cout<<"-----------------------------------\n|Monstro|Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|\n-----------------------------------\n";  
+        cout<<"----------------------------------------\n| Monstro    |Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|\n----------------------------------------\n";  
     }

@@ -14,7 +14,11 @@ class jogoRPG{
         int getTesourosEncontrados();
         
         void batalhar(personagem *jogador);
+
         void run(personagem *jogador);
-        int menu();
+
+        int menu(personagem *jogador);
+
+        void sangrar(personagem *jogador);
 
 };
