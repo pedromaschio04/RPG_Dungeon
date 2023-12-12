@@ -1,4 +1,4 @@
-#include "personagem.h"
+#include "mapaJogo.h"
 
 class jogoRPG{
     private:

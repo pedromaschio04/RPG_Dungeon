@@ -49,7 +49,7 @@ using namespace std;
 
     void personagem::escolherClasse(){
         int classeTipo;
-        cout<<"Digite o identificado para escolher sua classe:\n1-Arqueiro:|Ataque = 3| Defesa = 3|\n2-Ladino:|Ataque = 4| Defesa = 2|\n3-Bardo:|Ataque = 4| Defesa = 2|\n4-Berserker:|Ataque = 5| Defesa = 1|\n5-Druida:|Ataque = 3| Defesa = 4|\n";
+        cout<<"escolha sua classe:\n1-Arqueiro:|Ataque = 3| Defesa = 3|\n2-Ladino:|Ataque = 4| Defesa = 2|\n3-Bardo:|Ataque = 4| Defesa = 2|\n4-Berserker:|Ataque = 5| Defesa = 1|\n5-Druida:|Ataque = 3| Defesa = 4|\n";
         cin>> classeTipo;
         switch(classeTipo){
             case 1:
@@ -81,7 +81,7 @@ using namespace std;
     }
 
     void personagem::exibirStatus(){
-        cout<<"---------------------------------------\n|Jogador(a)|Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|\n---------------------------------------\n";  
+        cout<<"---------------------------------------\n|Jogador(a)|Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|\n---------------------------------------";  
     }
     
   
