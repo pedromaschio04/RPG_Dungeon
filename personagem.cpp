@@ -47,6 +47,23 @@ using namespace std;
         return classe;
     }
 
+    void personagem::setInventario(string item){
+        if(inventario.size()== 1 && inventario[0]==""){
+            inventario[0]=item;
+        }
+        else{
+            inventario.push_back(item);
+        }
+    }
+    
+    vector <string> personagem::getInventario(){
+        return inventario;
+    }
+    
+    string personagem::getInventarioItem(int posicao){
+        return inventario[posicao];
+    }
+
     void personagem::escolherClasse(){
         int classeTipo;
         cout<<"\n______________________________________\n|       SELECIONE A SUA CLASSE       |\n|------------------------------------|\n|1| Arqueiro  |Ataque = 3| Defesa = 3|\n|2| Ladino    |Ataque = 4| Defesa = 2|\n|3| Bardo     |Ataque = 4| Defesa = 2|\n|4| Berserker |Ataque = 5| Defesa = 1|\n|5| Druida    |Ataque = 3| Defesa = 4|\n--------------------------------------\n";
@@ -83,7 +100,14 @@ using namespace std;
     }
 
     void personagem::exibirStatus(){
-        cout<<"----------------------------------------\n| Jogador(a)|Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|Sangramento: "<<sangramento<<"|\n---------------------------------------";  
+        cout<<"-------------------------------------------------------\n| Jogador(a)|Vida:"<<vida<<"|Ataque:"<<ataque<<"|Defesa:"<<defesa<<"|Sangramento: "<<sangramento<<"|\n------------------------------------------------------";  
+    }                                                                                                                            
+
+    void personagem::exibirInventario(){
+        cout<<"----------------\n|  INVENTARIO  |\n----------------\n";    
+        for(int i = 0;i<inventario.size();i++){
+            cout<<i<<"-"<<inventario[i]<<"\n";
+        }
     }
     
   

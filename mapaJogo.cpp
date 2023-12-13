@@ -19,7 +19,7 @@ using namespace std;
     }
 
     void mapaJogo::exibirMapa(){
-        for(int i=0;i <13; i++){
+        for(int i=0;i <14; i++){
             cout<<"\n";
             for(int j=0;j<23;j++){
                 cout<<mapa[i][j];
@@ -62,5 +62,35 @@ using namespace std;
                 setPosicaoAtual(posicao);
             }
         }
-       
+    }
+
+    void mapaJogo::encontrouBau(personagem *jogador){
+        char continuar;
+        int item = 4;
+        system("clear");
+        cout<<jogador->getNome()<<" voce encontrou um bau misterioso!!\n";
+        while(item<0 || item>3){
+            item = rand()%20;
+        }
+        switch(item){
+            case 1:
+                jogador->setInventario("pocao_de_cura");
+                cout<<"Foi adicionado ao seu inventario uma pocao_de_cura\n";
+            break;
+            case 2:
+                jogador->setInventario("pocao_de_dano");
+                cout<<"Foi adicionado ao seu inventario uma pocao_de_dano\n";
+            break;
+            case 3:
+                jogador->setInventario("escudo");
+                cout<<"Foi adicionado ao seu inventario um escudo\n";
+            break;
+        }
+        cout<<"\nDigite c para continuar\n";
+        cin>>continuar;
+        system("clear");
+    }
+
+    string mapaJogo::getValor(vector <int> ps){
+        return mapa[ps[0]][ps[1]];
     }

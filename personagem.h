@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 using namespace std;
 
 class personagem{
@@ -9,6 +10,7 @@ class personagem{
         int defesa;
         int sangramento=0;
         int classe;
+        vector <string> inventario = {""};
     public:
         personagem();
         void setNome(string nm);
@@ -28,7 +30,14 @@ class personagem{
 
         void setClasse(int cl);
         int getClasse();
+
+        void setInventario(string item); 
+        vector <string> getInventario();
+        string getInventarioItem(int posicao);
         
         void escolherClasse();
+
         void exibirStatus();
+
+        void exibirInventario();
 };

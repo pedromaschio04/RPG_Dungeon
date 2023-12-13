@@ -69,19 +69,29 @@ using namespace std;
         jogador->escolherClasse();
         system("clear");
         vector <int> posicao;
+        char bauAberto[2] = {'f','f'};
         while(mapa.getPosicaoAtual()!=boss){
-            system("clear");
-            // monstros [3,1][3,13][11,14][11,16] 
+            system("clear"); 
             if(jogador->getSangramento()>0){
                 jogador->setVida(jogador->getVida()-1);
                 jogador->setSangramento(jogador->getSangramento()-1);
             }
+            // monstros [3,1][3,13][11,14][11,16]
+            // baus     [5,1][12,15]
             posicao = mapa.getPosicaoAtual();
             if((posicao[0]==3 && posicao[1]==1)||(posicao[0]==3 && posicao[1]==13)||(posicao[0]==11 && posicao[1]==14)||(posicao[0]==11 && posicao[1]==16)){
                 batalhar(jogador);
             }
+            if((posicao[0]==5 && posicao[1]==1)||(posicao[0]==12 && posicao[1]==15)){
+                mapa.encontrouBau(jogador);
+            }
+            
             mapa.exibirMapa();
             jogador->exibirStatus();
+            cout<<"\n";
+            if(jogador->getInventarioItem(0)!=""){
+                jogador->exibirInventario();
+            }
             mapa.andar(posicao);
         }
     }
